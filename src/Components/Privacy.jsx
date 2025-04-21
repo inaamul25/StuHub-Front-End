@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../Navbar";
-import Footer from "../header and footer/Footer";
+import Navbar from "./Navbar";
+import Footer from "./header and footer/Footer";
 
 function Privacy() {
   return (
