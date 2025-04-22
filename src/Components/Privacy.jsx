@@ -1,23 +1,29 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Navbar from "./Navbar";
 import Footer from "./header and footer/Footer";
 
 function Privacy() {
   return (
     <div>
+      <Helmet>
+        <title>Privacy Policy | StuHub LMS</title>
+        <meta name="description" content="Learn how StuHub LMS protects and uses your data." />
+      </Helmet>
       <Navbar page={"privacy"} />
       <div style={{ padding: "20px", textAlign: "center" }}>
         <h2>Privacy Policy</h2>
         <p>Last updated: April 21, 2025</p>
         <p>
-          We collect your name, email, and payment details to process transactions and provide our services. This data is used to improve our platform and ensure a smooth user experience. All information is stored securely using encryption and is not shared with third parties, except as required by law or with your consent.
+          We collect your name, email, and payment details to process transactions and improve our platform. All personal information is stored securely and never shared with third parties without your consent, except as required by law.
         </p>
         <p>
-          You have the right to access, correct, or delete your data by contacting us at support@stu-hub.com. For more details, please check back soon as we finalize this policy.
+          You have the right to access, modify, or delete your data anytime. Contact us at <a href="mailto:support@stu-hub.com">support@stu-hub.com</a>.
         </p>
       </div>
       <Footer />
     </div>
   );
 }
+
 export default Privacy;

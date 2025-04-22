@@ -1,19 +1,25 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Navbar from "./Navbar";
 import Footer from "./header and footer/Footer";
 
 function Terms() {
   return (
     <div>
+      <Helmet>
+        <title>Terms and Conditions | StuHub LMS</title>
+        <meta name="description" content="Read the terms and conditions for using StuHub LMS." />
+      </Helmet>
       <Navbar page={"terms"} />
       <div style={{ padding: "20px", textAlign: "center" }}>
         <h2>Terms and Conditions</h2>
         <p>Last updated: April 21, 2025</p>
-        <p>By using StuHub, you agree to our services under these terms. Enrollment in courses implies acceptance of payment policies and no refunds after 7 days.</p>
-        <p>For full details, check back as we update this section.</p>
+        <p>By using StuHub LMS, you agree to our terms of service. Enrollment in any course implies agreement to our payment and refund policies.</p>
+        <p>No refunds are offered after 7 days or after course access begins. For the full policy, please contact us.</p>
       </div>
       <Footer />
     </div>
   );
 }
+
 export default Terms;
