@@ -150,6 +150,16 @@ function Navbar(props) {
                 <Link to="/privacy">Privacy</Link>
               </li>
             )}
+            {/* Shipping Policy Link */}
+            {value === "shipping" ? (
+              <li className={value === "shipping" ? "active-policy" : ""}>
+                <Link to="/shipping">Shipping Policy</Link>
+              </li>
+            ) : (
+              <li>
+                <Link to="/shipping">Shipping Policy</Link>
+              </li>
+            )}
             {authToken !== null ? (
               <li>
                 <button onClick={handleLogOut} className="sign-out-button">
