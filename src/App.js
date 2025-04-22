@@ -26,7 +26,7 @@ import ContactUs from './Components/ContactUs'; // New component
 import Terms from './Components/Terms'; // New component
 import Refunds from './Components/Refunds'; // New component
 import Privacy from './Components/Privacy'; // New component
-import Shipping from './Components/Shipping'; // New component for shipping policy
+import Shipping from './Components/Shipping';
 
 function App() {
   return (
