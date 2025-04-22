@@ -26,7 +26,8 @@ import ContactUs from './Components/ContactUs'; // New component
 import Terms from './Components/Terms'; // New component
 import Refunds from './Components/Refunds'; // New component
 import Privacy from './Components/Privacy'; // New component
-import Shipping from './Components/Shipping';
+
+
 
 function App() {
   return (
@@ -55,7 +56,7 @@ function App() {
           <Route path='/terms' element={<Terms />} /> {/* New route */}
           <Route path='/refunds' element={<Refunds />} /> {/* New route */}
           <Route path='/privacy' element={<Privacy />} /> {/* New route */}
-          <Route path='/shipping' element={<Shipping />} /> {/* New route for Shipping Policy */}
+        {/* New route for Shipping Policy */}
           <Route path='*' element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
