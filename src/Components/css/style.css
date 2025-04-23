@@ -34,82 +34,101 @@ h6 {
 
 /* Navigation */
 nav {
-  background: #0d1b2a; /* Sleek dark blue-black */
+  background: #0d1b2a; /* Matches the dark background in the screenshot */
   width: 100%;
-  height: 90px; /* Taller for a bold presence */
+  height: 60px; /* Adjusted to match the screenshot height */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 12vw;
+  padding: 0 20px; /* Reduced padding for a tighter layout */
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-nav img {
-  width: clamp(150px, 20vw, 220px);
+nav .logo1 {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo1 img {
+  width: 40px; /* Adjusted to match the logo size in the screenshot */
   height: auto;
+  margin-right: 10px;
 }
 
-nav .logo1 #academ {
-  color: #ffcc00; /* Bright yellow for pop */
-  font-size: clamp(22px, 4.5vw, 30px);
-  font-weight: 700;
-  letter-spacing: 2px;
+/* Add text "StuHub" after the logo */
+nav .logo1::after {
+  content: "StuHub";
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 nav .navigation ul {
   display: flex;
-  gap: 40px; /* Wider spacing for luxury feel */
-}
-
-nav .navigation ul li {
+  align-items: center;
   list-style: none;
-}
-
-nav #menu-btn,
-nav #menu-close {
-  display: none;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
+  gap: 20px; /* Adjusted spacing between links */
 }
 
 nav .navigation ul li a,
 nav .navigation ul li button {
   text-decoration: none;
   color: #fff;
-  font-size: clamp(15px, 2vw, 17px);
+  font-size: 14px; /* Smaller font size to match the screenshot */
+  font-weight: 500;
+  padding: 8px 12px; /* Adjusted padding for better fit */
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+nav .navigation ul li a:hover,
+nav .navigation ul li button:hover {
+  opacity: 0.8; /* Subtle hover effect */
+}
+
+/* Active link styling */
+nav .navigation ul li.active-home a,
+nav .navigation ul li.active-courses a,
+nav .navigation ul li.active-policy a {
+  color: #6b5b95; /* Purple color for active links */
   font-weight: 600;
-  padding: 10px 20px;
-  border-radius: 50px;
-  transition: all 0.4s ease;
 }
 
-nav .navigation ul li a:hover {
-  background: #ff3366; /* Vibrant hover */
-  box-shadow: 0 5px 15px rgba(255, 51, 102, 0.4);
+/* Profile and Learnings styling */
+nav .navigation ul li a[style*="background-color: purple"] {
+  background-color: #6b5b95 !important; /* Purple background as per screenshot */
+  color: #fff !important;
+  padding: 8px 12px !important;
+  border-radius: 20px;
 }
 
+/* Privacy Policy button (8th item in the list based on your JSX) */
+nav .navigation ul li:nth-child(8) a {
+  background-color: #ff4d6d; /* Pink background as per screenshot */
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+/* Sign Out / Login button */
 nav .navigation ul li button {
-  background: #ffcc00; /* Bold yellow CTA */
+  background: #f7c948; /* Yellow background as per screenshot */
   color: #0d1b2a;
   border: none;
-  font-weight: 700;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-nav .navigation ul li button:hover {
-  background: #ff3366;
+/* Mobile Menu */
+nav #menu-btn,
+nav #menu-close {
+  display: none;
+  font-size: 24px;
   color: #fff;
-  transform: scale(1.1); /* Pop effect */
-}
-
-/* New Active Policy Class */
-nav .navigation ul li.active-policy a {
-  background: #ff3366; /* Match hover effect */
-  box-shadow: 0 5px 15px rgba(255, 51, 102, 0.4);
-  color: #fff; /* Ensure text stays readable */
+  cursor: pointer;
 }
 
 /* Home */
@@ -427,7 +446,7 @@ footer .copyright .pro-links .i:hover {
   }
 
   nav {
-    padding: 0 6vw;
+    padding: 0 15px;
   }
 
   nav .navigation ul {
@@ -438,7 +457,7 @@ footer .copyright .pro-links .i:hover {
     height: 100vh;
     background: #0d1b2a;
     flex-direction: column;
-    padding: 70px 25px 25px;
+    padding: 70px 25px;
     transition: right 0.4s ease;
   }
 
@@ -455,6 +474,24 @@ footer .copyright .pro-links .i:hover {
     position: absolute;
     top: 25px;
     right: 25px;
+  }
+
+  nav .navigation ul li {
+    margin: 10px 0;
+  }
+
+  nav .navigation ul li.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  nav .navigation ul li.close-button button {
+    background: none;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
   }
 
   #home, #features, #course, #registration {

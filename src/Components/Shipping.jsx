@@ -8,10 +8,23 @@ function Shipping() {
     <div>
       <Helmet>
         <title>Shipping Policy | StuHub LMS</title>
-        <meta
-          name="description"
-          content="Shipping policy details for StuHub LMS."
-        />
+        <meta name="description" content="Shipping policy details for StuHub LMS." />
+        <link rel="canonical" href="https://stu-hub-front-end.vercel.app/shipping" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Shipping Policy",
+              "url": "https://stu-hub-front-end.vercel.app/shipping",
+              "description": "StuHub LMS provides digital courses only. No physical shipping involved.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "StuHub LMS"
+              }
+            }
+          `}
+        </script>
       </Helmet>
       <Navbar page={"shipping"} />
       <div style={{ padding: "20px", textAlign: "center" }}>

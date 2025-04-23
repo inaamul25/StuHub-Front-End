@@ -9,6 +9,22 @@ function Refunds() {
       <Helmet>
         <title>Refund Policy | StuHub LMS</title>
         <meta name="description" content="Learn about the refund and cancellation policies of StuHub LMS." />
+        <link rel="canonical" href="https://stu-hub-front-end.vercel.app/refunds" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Refund Policy",
+              "url": "https://stu-hub-front-end.vercel.app/refunds",
+              "description": "Refunds are available within 7 days of purchase. Email us at support@stu-hub.com.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "StuHub LMS"
+              }
+            }
+          `}
+        </script>
       </Helmet>
       <Navbar page={"refunds"} />
       <div style={{ padding: "20px", textAlign: "center" }}>
