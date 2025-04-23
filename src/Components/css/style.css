@@ -53,18 +53,12 @@ nav .logo1 {
 }
 
 nav .logo1 img {
-  width: 40px; /* Adjusted to match the logo size in the screenshot */
+  width: 89px; /* Adjusted to match the logo size in the screenshot */
   height: auto;
   margin-right: 10px;
 }
 
-/* Add text "StuHub" after the logo */
-nav .logo1::after {
-  content: "StuHub";
-  color: #fff;
-  font-size: 20px;
-  font-weight: 600;
-}
+
 
 nav .navigation ul {
   display: flex;
